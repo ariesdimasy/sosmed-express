@@ -1,0 +1,27 @@
+{
+    "development": {
+      "username": "",
+      "password": "",
+      "database": "",
+      "host": "",
+      "dialect": "",
+      "operatorsAliases": ""
+    },
+    "test": {
+        "username": "",
+        "password": "",
+        "database": "",
+        "host": "",
+        "dialect": "",
+        "operatorsAliases": ""
+    },
+    "production": {
+        "username": "",
+        "password": "",
+        "database": "",
+        "host": "",
+        "dialect": "",
+        "operatorsAliases": ""
+    }
+  }
+  
