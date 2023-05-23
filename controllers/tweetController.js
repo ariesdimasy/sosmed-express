@@ -7,7 +7,7 @@ module.exports = {
         try { 
 
             const result = await Tweet.findAll({
-                attributes:["id","tweet","imageUrl","userId"],
+                attributes:["id","tweet","imageUrl","userId","imageName"],
                 include:[{ 
                     model:db.user,
                     attributes:["name","email","username"]
@@ -80,6 +80,13 @@ module.exports = {
         try { 
 
             const { tweet, imageUrl } = req.body
+
+            console.log(req.body)
+
+            return res.send({ test: 'test'})
+            const file = req.file;
+            //console.log("file => ", file)
+            //process.exit()
             const token =  req.headers.authorization.split(" ")[1]
 
             // console.log("token => ", token)
@@ -90,6 +97,7 @@ module.exports = {
             const result = await Tweet.create({
                 tweet:tweet, 
                 imageUrl:imageUrl || '',
+                imageName:file?.filename || '',
                 userId:user_id
             })
 

@@ -13,6 +13,9 @@ module.exports = (sequelize, DataTypes) => {
         // isUrl:true
       }
     },
+    imageName:{
+      type:DataTypes.STRING,
+    }, 
     userId: { 
       type:DataTypes.INTEGER
     }
